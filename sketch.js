@@ -5,14 +5,15 @@ function setup(){
 }
 function draw(){
 	background(255);
+	translate(200,200);
+
 	rotate(-90);
-	translate(-200,0);
-
-
+	
 	let hr = hour();
 	let mn= minute();
 	let sc = second();
-	
+	console.log(sc);
+	//  mapping of min hr sec to degrees 
 	let end1=map(sc,0,59,0,360);
 	let end2=map(mn,0,59,0,360);
 	let end3=map(hr%12,0,12,0,360);
@@ -22,7 +23,6 @@ function draw(){
 	rotate(end1);
 	line(0,0,100,0)
 	pop();
-
 
 	stroke(12,108,150);
 	push();
@@ -36,10 +36,7 @@ function draw(){
 	line(0,0,100,0)
 	pop();
 	point(-0,0);
-
-
-
-
+	translate(0,-200)
 	strokeWeight(8);
 	stroke(255,100,150);
 	noFill();
