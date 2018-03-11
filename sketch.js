@@ -12,7 +12,6 @@ function draw(){
 	let hr = hour();
 	let mn= minute();
 	let sc = second();
-	console.log(sc);
 	//  mapping of min hr sec to degrees 
 	let end1=map(sc,0,59,0,360);
 	let end2=map(mn,0,59,0,360);
